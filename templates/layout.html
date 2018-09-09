@@ -57,10 +57,10 @@
             {% endif %}
         {% endwith %}
 
-           <nav class="navbar navbar-dark bg-dark">
+           <nav class="navbar navbar-light bg-light">
+              <a class="navbar-brand" href="{{url_for('index')}}">Brand</a>
               
               {% if user %}  
-                    <a class="navbar-brand" href="{{url_for('index')}}">Brand</a>
                           <div class="dropdown">
                             {% if user.profile_img %}
                             <img src="{{url_for('uploaded_file', filename=user.profile_img)}}" width="40px" height="40px" class="avatar img-circle" alt="avatar">

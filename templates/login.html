@@ -6,34 +6,29 @@
 
 {% block body %}
 
-<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4">
-			<div  id = 'divform'>
-				<h1>Login</h1>
-				<form id="form" action="{{url_for('login')}}" method="POST">
-			    
-					<div class="rowInput">
-						<label for="username"><i class="fas fa-user-tie" ></i></label>
-						<input type="text" name="username" class="form-control" id="username" placeholder="Your username" title="i.e. IronMan. This should be unique accross the site" required>
-					</div>
-
-					<div class="rowInput">
-						<label for="password"> <i class="fas fa-user-lock"></i> </label>
-						<input type="password" class="form-control" name="password" id="password"placeholder="Your password" title="Enter your password" required>
-					</div>
-					
-					<div id='submit_register'>
-						<input type="submit" class="btn btn-danger" name="submit" value="Login">
-			      <a href="/register">Don't have an account?</a>
-					</div>
-
-				</form>
-			</div>
-		</div>
-		<div class="col-md-4"></div>
-
+<div  id = 'divform'>
+	<div id = "form-title">
+		<h1>Login</h1>
 	</div>
+	<form id="form" action="{{url_for('login')}}" method="POST">
+    
+		<div class="rowInput">
+			<label for="username"><i class="fas fa-user-tie" ></i></label>
+			<input type="text" name="username" class="form-control" id="username" placeholder="Your username" title="i.e. IronMan. This should be unique accross the site" required>
+		</div>
+
+		<div class="rowInput">
+			<label for="password"> <i class="fas fa-user-lock"></i> </label>
+			<input type="password" class="form-control" name="password" id="password"placeholder="Your password" title="Enter your password" required>
+		</div>
+		
+		<div id='submit_register'>
+			<input type="submit" class="btn btn-danger" name="submit" value="Login">
+      <a href="/register">Don't have an account?</a>
+		</div>
+
+	</form>
+</div>
 
 
 {% endblock %}

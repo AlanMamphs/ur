@@ -1,46 +1,75 @@
 body {
-  background-color: #00BFA5;
-  font-family: "Julius Sans One", sans-serif; }
-  body div .row {
-    width: 98%; }
+  font-family: "Julius Sans One", sans-serif;
+  background-image: url("https://stmed.net/sites/default/files/geometry-wallpapers-25220-7380524.jpg"); }
+  body #penguin {
+    background-image: url("https://i.pinimg.com/originals/e5/f9/f3/e5f9f398bbae7953349a88beb427fa9d.png"); }
+    body #penguin .penguin {
+      z-index: 3; }
 
 html, body {
   max-width: 100%;
   overflow-x: hidden; }
 
-nav .dropdown .dropdown-menu {
-  left: auto;
-  right: 0; }
+.navbar {
+  background-color: #304FFE; }
+  .navbar .dropdown .dropdown-menu {
+    left: auto;
+    right: 0; }
+
+#photo-form i {
+  font-size: 30px; }
+
+#info-form, #password-form {
+  width: 600px;
+  border: 1px solid green;
+  background-color: rgba(0, 130, 12, 0.3);
+  padding: 10px;
+  margin-bottom: 20px; }
+  #info-form .rowInput, #password-form .rowInput {
+    display: flex; }
+    #info-form .rowInput label, #password-form .rowInput label {
+      display: flex;
+      width: 15%; }
+    #info-form .rowInput input, #password-form .rowInput input {
+      width: 60%;
+      margin: 2%;
+      display: flex; }
 
 #divform {
-  background-color: #263238;
-  padding: 2% 2% 0 1.5%;
-  border-radius: 5px;
-  margin: auto; }
-  @media only screen and (max-width: 800px) {
-    #divform {
-      max-width: 400px; } }
-  #divform h1 {
+  min-width: 400px;
+  margin: 20px auto;
+  max-width: 400px;
+  background-color: #7986CB;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 7px 10px 34px 1px black, inset -5px -8px 4px 1px #263238; }
+  #divform #form-title h1 {
     text-align: center;
-    color: white; }
-  #divform form {
-    padding: 10px; }
-    #divform form .rowInput {
-      width: 100%;
-      display: flex;
-      margin: 15px;
-      font-family: "Shadows Into Light", cursive; }
-      #divform form .rowInput label {
-        width: 20%;
-        text-align: center;
-        margin: 0px 10px 0px -30px; }
-        #divform form .rowInput label i {
-          color: white;
-          font-size: 35px; }
+    color: white;
+    font-weight: 600; }
+  #divform form .rowInput {
+    display: flex;
+    font-family: "Shadows Into Light", cursive; }
+    #divform form .rowInput label {
+      width: 50px;
+      margin: auto;
+      text-align: center; }
+      #divform form .rowInput label i {
+        font-size: 35px;
+        color: white; }
+    #divform form .rowInput input {
+      margin: 2%; }
+  #divform form #submit_register {
+    display: flex; }
     #divform form #submit_register input {
+      box-shadow: 0px 3px 0px 0px #222121;
+      height: 40px;
+      display: flex;
       color: white;
-      font-weight: bold; }
+      font-weight: bold;
+      margin: 10px; }
     #divform form #submit_register a {
+      display: flex;
       color: white;
       float: right;
       padding: 10px; }

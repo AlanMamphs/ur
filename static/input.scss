@@ -1,12 +1,14 @@
 $generalfont: 'Julius Sans One', sans-serif;
 $inputfont: 'Shadows Into Light', cursive;
 body{
-  background-color:#00BFA5;
   font-family: $generalfont;
-  div {
-    .row{
-      width:98%;
-    }
+   background-image:url("https://stmed.net/sites/default/files/geometry-wallpapers-25220-7380524.jpg");
+
+  #penguin {
+  background-image:url("https://i.pinimg.com/originals/e5/f9/f3/e5f9f398bbae7953349a88beb427fa9d.png");
+  .penguin {
+    z-index:3;
+  }
   }
 }
 
@@ -15,7 +17,8 @@ html, body {
     overflow-x: hidden;
 }
 
-nav{
+.navbar{
+  background-color:#304FFE;
   .dropdown {
     .dropdown-menu{
       left:auto;
@@ -25,53 +28,90 @@ nav{
     }
 }
 
+
+}
+
+#photo-form{
+  i{
+    font-size:30px;
+
+
+  }
+}
+
+#info-form, #password-form{
+  width:600px;
+  border: 1px solid green;
+  background-color:rgba(0, 130, 12, 0.3);
+  padding:10px;
+  margin-bottom:20px;
+  .rowInput{
+    display:flex;
+
+    label{
+      display:flex;
+      width:15%;
+    }
+    input {
+      width:60%;
+      margin:2%;
+      display:flex;
+    }
+  }
 }
 
 #divform {
-  @media only screen and (max-width:800px){
+    min-width:400px;
+    margin:20px auto;
     max-width:400px;
-  }
-  background-color:#263238;
-  padding:2% 2% 0 1.5%;
-  border-radius:5px;
-  margin:auto;
-    h1 {
-      
-      text-align:center;
-      color:white;
-      
+    background-color:#7986CB;
+    padding:20px;
+    border-radius:10px;
+    box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 1), inset  -5px -8px 4px 1px #263238;
+    #form-title{
+      h1 {
+        text-align:center;
+        color:white;
+        font-weight:600;
+      }
     }
+
   form {
     
-    padding:10px;
-   
-    
     .rowInput {
-      width:100%;
-      display:flex;
-      margin:15px;
+
+      display:flex;      
       font-family: $inputfont;
       label {
-        width:20%;
-        text-align:center;
-        margin:0px 10px 0px -30px; 
-        
+          width:50px;
+          margin: auto;
+          text-align:center;
         i {
-          color:white;
           font-size:35px;
+          color:white;
         }
       }
+      input {
+        margin:2%;
+      }
       
+
       
     }
     
     #submit_register {
+      display:flex;
       input {
+        box-shadow: 0px 3px 0px 0px #222121;
+        height:40px;
+        display:flex;
         color:white;
         font-weight:bold;
+        margin:10px;
       }
       
       a{
+        display:flex;
         color:white;
         float:right;
         padding: 10px;

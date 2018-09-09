@@ -8,8 +8,8 @@
 
 <div class="container">
     <h1>Edit Profile</h1>
-  	<hr>
-	<div class="row">
+    <hr>
+  <div class="row">
       <!-- left column -->
       <div class="col-md-3">
         <div class="text-center">
@@ -21,10 +21,9 @@
 
 
           <h6>Upload a different photo...</h6>
-          <form method="POST" enctype="multipart/form-data" action="{{ url_for('profile', username=user.username) }}">
-              
-              <input type="file" name="file" accept="image/*">
-              <input type="submit" name="upload" text="upload image">
+          <form id="photo-form" method="POST" enctype="multipart/form-data" action="{{ url_for('profile', username=user.username) }}">
+              <label for="file"><i class="far fa-image"></i></i></label>
+              <input id = 'file' type="file" name="file" accept="image/*" value="" style="display: none;" >
           </form>
         </div>
 
@@ -32,80 +31,69 @@
       </div>
       
       <!-- edit form column -->
-      <div class="col-md-9 personal-info">
-
+      <div class="edit_profile">
         <h3>Personal info</h3>
-        <div class="form-group">
-          <label class="col-md-3 control-label">Username: </label>
-          <div class="col-md-8">
-            <input class="form-control" type="text" value="{{user.username}}" title="not editable" readonly>
-          </div>
-        </div>
-        <form class="form-horizontal" role="form" method='POST' action="{{url_for('update', username=user.username, data='info')}}">
-          <div class="form-group">
+       
+        <form id="info-form" method='POST' action="{{url_for('update', username=user.username, data='info')}}">
+          <div class="rowInput">
             <label class="col-lg-3 control-label">First name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="{{user.name}}" name="name">
-            </div>
-          </div>
-          <div class="form-group">
+            <input class="form-control" type="text" value="{{user.name}}" name="name">
+          </div> 
+          <div class="rowInput">
             <label class="col-lg-3 control-label">Last name:</label>
-            <div class="col-lg-8">
-              <input class="form-control" type="text" value="{{user.surname}}" name="surname">
-            </div>
+            <input class="form-control" type="text" value="{{user.surname}}" name="surname">           
           </div>
-          <div class="form-group">
+
+          <div class="rowInput">
             <label class="col-lg-3 control-label">Email:</label>
-            <div class="col-lg-8">
-              <input class="form-control" name="email" id="email" type="email" value="{{user.email}}">
-            </div>
+            <input class="form-control" name="email" id="email" type="email" value="{{user.email}}">
           </div>
 
-          <div class="form-group">
+          <div class="rowInput">
             <label class="col-lg-3 control-label">Mobile:</label>
-            <div class="col-lg-8">
-              <input type="text" pattern="(\+\d{1,3}[- ]?)?\d{10}" class="form-control" name="mobile" id="mobile" placeholder="Your mobile" value="{{user.mobile}}" title="i.e. +996555555 or 0555555555">
-            </div>
+            <input type="text" pattern="(\+\d{1,3}[- ]?)?\d{10}" class="form-control" name="mobile" id="mobile" placeholder="Your mobile" value="{{user.mobile}}" title="i.e. +996555555 or 0555555555">
           </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label"></label>
-            <div class="col-md-8">
+
+          <div class="submit">
               <input type="submit" class="btn btn-primary" value="Save Changes">
-              <span></span>
               <input type="reset" class="btn btn-default" value="Cancel">
-            </div>
+              
           </div>
+
         </form>
 
-        <form class="form-horizontal" role="form" method='POST' action="{{url_for('update', username=user.username, data='password')}}">
+          <form id="password-form" method='POST' action="{{url_for('update', username=user.username, data='password')}}">
+          
           <h3>Edit Password</h3>
-          <div class="form-group">
+          
+          <div class="rowInput">
             <label class="col-md-3 control-label">Old Password:</label>
-            <div class="col-md-8">
-              <input class="form-control" name="old_password" id="old_password" type="password" value="" placeholder="your old password">
-            </div>
-          </div>
-          <div class="form-group">
+            <input class="form-control" name="old_password" id="old_password" type="password" value="" placeholder="your old password">
+
+
+          </div>  
+          <div class="rowInput">    
             <label class="col-md-3 control-label">New password:</label>
-            <div class="col-md-8">
-              <input type="password" class="form-control" name="password" id="password" onchange="validatePassword()" placeholder="Your password"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title=" Password should have UpperCase, LowerCase and Number" required>
-            </div>
+            <input type="password" class="form-control" name="password" id="password" onchange="validatePassword()" placeholder="Your password"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title=" Password should have UpperCase, LowerCase and Number" required>
           </div>
-          <div class="form-group">
+
+          <div class="rowInput">
             <label class="col-md-3 control-label">Confirm new password:</label>
-            <div class="col-md-8">
-              <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm password" onkeyup="validatePassword()" title="Repeat your password" required>
-            </div>
-          </div
-          <div class="form-group">
-            <label class="col-md-3 control-label"></label>
-            <div class="col-md-8">
-              <input type="submit" class="btn btn-primary" value="Save Changes">
-              <span></span>
-              <input type="reset" class="btn btn-default" value="Cancel">
-            </div>
+             <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm password" onkeyup="validatePassword()" title="Repeat your password" required>
+           
           </div>
+
+
+          <div class="submit">
+              <input type="submit" class="btn btn-primary" value="Save Changes">
+              <input type="reset" class="btn btn-default" value="Cancel">
+              
+          </div>
+
         </form>
+
+
+
       </div>
   </div>
 </div>
