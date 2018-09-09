@@ -1,0 +1,93 @@
+$generalfont: 'Julius Sans One', sans-serif;
+$inputfont: 'Shadows Into Light', cursive;
+body{
+  background-color:#00BFA5;
+  font-family: $generalfont;
+  div {
+    .row{
+      width:98%;
+    }
+  }
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+nav{
+  .dropdown {
+    .dropdown-menu{
+      left:auto;
+      right:0;
+
+      
+    }
+}
+
+}
+
+#divform {
+  @media only screen and (max-width:800px){
+    max-width:400px;
+  }
+  background-color:#263238;
+  padding:2% 2% 0 1.5%;
+  border-radius:5px;
+  margin:auto;
+    h1 {
+      
+      text-align:center;
+      color:white;
+      
+    }
+  form {
+    
+    padding:10px;
+   
+    
+    .rowInput {
+      width:100%;
+      display:flex;
+      margin:15px;
+      font-family: $inputfont;
+      label {
+        width:20%;
+        text-align:center;
+        margin:0px 10px 0px -30px; 
+        
+        i {
+          color:white;
+          font-size:35px;
+        }
+      }
+      
+      
+    }
+    
+    #submit_register {
+      input {
+        color:white;
+        font-weight:bold;
+      }
+      
+      a{
+        color:white;
+        float:right;
+        padding: 10px;
+      }
+      a:hover{
+        color:orange;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

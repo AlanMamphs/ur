@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registration
+{% endblock %}
+
+{% block body %}
+	<div class="row">
+		<div class="col-md-3 col-lg-3 col-sm-2 col-xs-0"></div>
+		<div id = 'divform' class="col-md-6 col-lg-5 col-sm-8 col-xs-12">
+			
+	<h1>Sign Up!</h1>
+	<form id="form" action="{{url_for('register')}}" method="POST">
+    
+		<div class="rowInput">
+			<label for="username"><i class="fas fa-user-tie" ></i></label>
+			<input type="text" name="username" class="form-control" id="username" placeholder="Your username" title="i.e. IronMan. This should be unique accross the site" required>
+		</div>
+
+		<div class="rowInput">
+			<label for="password"> <i class="fas fa-user-lock"></i> </label>
+			<input type="password" class="form-control" name="password" id="password" onchange="validatePassword()" placeholder="Your password"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title=" Password should have UpperCase, LowerCase and Number" required>
+		</div>
+		<div class="rowInput">
+			<label for="confirm"><i class="fas fa-user-lock"></i></label>
+			<input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm password" onkeyup="validatePassword()" title="Repeat your password" required>
+		</div>
+		<div class="rowInput">
+			<label for="email"><i class="far fa-envelope"></i></label>
+			<input type="email" class="form-control" name="email" id="email" placeholder="Your email" title="You should use a valid email, you didn't use before" required>
+		</div>
+
+		<div class="rowInput">
+			<label for="name"><i class="fas fa-user-edit"></i></label>
+			<input type="text" pattern="[A-Za-z]+" class="form-control" name="name" id="name" placeholder="Your real name" title="Please,write your real name. This will not be visible to others" required>
+		</div>
+
+		<div class="rowInput">
+			<label for="surname"><i class="fas fa-user-edit"></i></label>
+			<input type="text" class="form-control" name="surname" pattern="[A-Za-z]+" id="surname" placeholder="Your real surname" title="Please,write your real surname. This will not be visible to others" required>
+		</div>
+
+		<div class="rowInput">
+			<label for="mobile"><i class="fas fa-mobile-alt"></i></label>
+			<input type="text" pattern="(\+\d{1,3}[- ]?)?\d{10}" class="form-control" name="mobile" id="mobile" placeholder="Your mobile" title="i.e. +996555555 or 0555555555" required>
+		</div>
+		<div class="rowInput">
+			<label for="birthday"><i class="fas fa-birthday-cake"></i></label>
+			<input type="date" class="form-control" name="birthday" id="birthday" placeholder="Your birthday" title="This will not be visible to others." required>
+		</div>
+
+		<div id='submit_register'>
+			<input type="submit" class="btn btn-danger" name="submit" value="Register">
+      <a href="/login">Already have an account?</a>
+		</div>
+
+	</form>
+		</div>
+		<div class="col-md-3 col-lg-4 col-sm-2 col-xs-0"></div>
+
+	</div>
+
+{% endblock %}

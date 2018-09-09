@@ -1,0 +1,50 @@
+body {
+  background-color: #00BFA5;
+  font-family: "Julius Sans One", sans-serif; }
+  body div .row {
+    width: 98%; }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
+nav .dropdown .dropdown-menu {
+  left: auto;
+  right: 0; }
+
+#divform {
+  background-color: #263238;
+  padding: 2% 2% 0 1.5%;
+  border-radius: 5px;
+  margin: auto; }
+  @media only screen and (max-width: 800px) {
+    #divform {
+      max-width: 400px; } }
+  #divform h1 {
+    text-align: center;
+    color: white; }
+  #divform form {
+    padding: 10px; }
+    #divform form .rowInput {
+      width: 100%;
+      display: flex;
+      margin: 15px;
+      font-family: "Shadows Into Light", cursive; }
+      #divform form .rowInput label {
+        width: 20%;
+        text-align: center;
+        margin: 0px 10px 0px -30px; }
+        #divform form .rowInput label i {
+          color: white;
+          font-size: 35px; }
+    #divform form #submit_register input {
+      color: white;
+      font-weight: bold; }
+    #divform form #submit_register a {
+      color: white;
+      float: right;
+      padding: 10px; }
+    #divform form #submit_register a:hover {
+      color: orange; }
+
+/*# sourceMappingURL=style.css.map */
