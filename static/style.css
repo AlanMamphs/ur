@@ -20,7 +20,7 @@ html, body {
   font-size: 30px; }
 
 #info-form, #password-form {
-  width: 600px;
+  width: 500px;
   border: 1px solid green;
   background-color: rgba(0, 130, 12, 0.3);
   padding: 10px;
@@ -36,6 +36,7 @@ html, body {
       display: flex; }
 
 #divform {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/132/887/non_2x/vector-beautiful-blue-snowflake-background.jpg");
   min-width: 400px;
   margin: 20px auto;
   max-width: 400px;
@@ -45,18 +46,18 @@ html, body {
   box-shadow: 7px 10px 34px 1px black, inset -5px -8px 4px 1px #263238; }
   #divform #form-title h1 {
     text-align: center;
-    color: white;
+    color: #7499ac;
     font-weight: 600; }
   #divform form .rowInput {
     display: flex;
     font-family: "Shadows Into Light", cursive; }
     #divform form .rowInput label {
-      width: 50px;
+      width: 70px;
       margin: auto;
       text-align: center; }
       #divform form .rowInput label i {
         font-size: 35px;
-        color: white; }
+        color: #546E7A; }
     #divform form .rowInput input {
       margin: 2%; }
   #divform form #submit_register {

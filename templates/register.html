@@ -16,7 +16,7 @@
     
 		<div class="rowInput">
 			<label for="username"><i class="fas fa-user-tie" ></i></label>
-			<input type="text" name="username" class="form-control" id="username" placeholder="Your username" title="i.e. IronMan. This should be unique accross the site" required>
+			<input type="text" name="username" class="form-control" id="username" placeholder="Your username" title="i.e. IronMan. This should be unique accross the site" value="{{data['username']}}" required>
 		</div>
 
 		<div class="rowInput">
@@ -25,30 +25,30 @@
 		</div>
 		<div class="rowInput">
 			<label for="confirm"><i class="fas fa-user-lock"></i></label>
-			<input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm password" onkeyup="validatePassword()" title="Repeat your password" required>
+			<input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm password" onkeyup="validatePassword()" title="Repeat your password" value="" required>
 		</div>
 		<div class="rowInput">
 			<label for="email"><i class="far fa-envelope"></i></label>
-			<input type="email" class="form-control" name="email" id="email" placeholder="Your email" title="You should use a valid email, you didn't use before" required>
+			<input type="email" class="form-control" name="email" id="email" placeholder="Your email" title="You should use a valid email, you didn't use before" value="{{data['email']}}" required>
 		</div>
 
 		<div class="rowInput">
 			<label for="name"><i class="fas fa-user-edit"></i></label>
-			<input type="text" pattern="[A-Za-z]+" class="form-control" name="name" id="name" placeholder="Your real name" title="Please,write your real name. This will not be visible to others" required>
+			<input type="text" pattern="[A-Za-z]+" class="form-control" name="name" id="name" placeholder="Your real name" title="Please,write your real name. This will not be visible to others" value="{{data['name']}}" required>
 		</div>
 
 		<div class="rowInput">
 			<label for="surname"><i class="fas fa-user-edit"></i></label>
-			<input type="text" class="form-control" name="surname" pattern="[A-Za-z]+" id="surname" placeholder="Your real surname" title="Please,write your real surname. This will not be visible to others" required>
+			<input type="text" class="form-control" name="surname" pattern="[A-Za-z]+" id="surname" placeholder="Your real surname" title="Please,write your real surname. This will not be visible to others" value="{{data['surname']}}" required>
 		</div>
 
 		<div class="rowInput">
 			<label for="mobile"><i class="fas fa-mobile-alt"></i></label>
-			<input type="text" pattern="(\+\d{1,3}[- ]?)?\d{10}" class="form-control" name="mobile" id="mobile" placeholder="Your mobile" title="i.e. +996555555 or 0555555555" required>
+			<input type="text" pattern="(\+\d{1,3}[- ]?)?\d{10}" class="form-control" name="mobile" id="mobile" placeholder="Your mobile" title="i.e. +996555555 or 0555555555" value="{{data['mobile']}}" required>
 		</div>
 		<div class="rowInput">
 			<label for="birthday"><i class="fas fa-birthday-cake"></i></label>
-			<input type="date" class="form-control" name="birthday" id="birthday" placeholder="Your birthday" title="This will not be visible to others." required>
+			<input type="date" class="form-control" name="birthday" id="birthday" placeholder="Your birthday" title="This will not be visible to others." value="{{data['birthday']}}" required>
 		</div>
 
 		<div id='submit_register'>

@@ -1,3 +1,4 @@
+import json
 from flask import Flask, render_template, jsonify, request, flash, redirect, url_for, send_from_directory
 from models import *
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -39,6 +40,7 @@ def register():
 
 		user = User.query.filter(User.username.ilike(username)).first()
 		user_email = User.query.filter(User.email.ilike(email)).first()
+		data = json.dumps(request.form.to_dict())
 
 		if not user and not user_email:
 			password = generate_password_hash(password, method="sha256")
@@ -51,10 +53,15 @@ def register():
 
 		elif user:
 			flash(u"This user already exists!", 'error')
+			return render_template('register.html', data=json.loads(data))
+			
 		elif email:
+			print(request.form.to_dict(flat=False))	
 			flash(u"This email is already in use", 'error')
+			return render_template('register.html', data=json.loads(data))
 
-	return render_template('register.html')
+
+	return render_template('register.html', data=data)
 
 @app.route("/update/<string:username>/<string:data>", methods=["POST"])
 def update(username, data):
