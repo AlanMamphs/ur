@@ -1,11 +1,14 @@
 import json
+import os
+
 from flask import Flask, render_template, jsonify, request, flash, redirect, url_for, send_from_directory
-from models import *
-from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, logout_user, current_user
 from flask_uploads import UploadSet, configure_uploads, IMAGES
+
+from models import *
+
+from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
-import os
 
 
 photos = UploadSet('photos', IMAGES)
@@ -101,9 +104,6 @@ def update(username, data):
 			return redirect(url_for('profile', username=current_user.username))
 		
 	return redirect(url_for('profile', username=current_user.username))
-
-
-
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
