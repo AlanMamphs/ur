@@ -1,12 +1,31 @@
 $generalfont: 'Julius Sans One', sans-serif;
-$inputfont: 'Shadows Into Light', cursive;
+$inputfont: 'Muli', sans-serif;
+$background-color: #304FFE;
+$form-color: #FAFAFA;
+$buttons-submit-color:#EF6C00; 
+$a-color:red;
+$a-hover-color:orange;
 body{
   font-family: $generalfont;
-   background-image:url("https://image.ibb.co/btr7AU/geometry_wallpapers_25220_7380524.jpg");
-
-  #penguin {
+   // background-image:url("https://image.ibb.co/btr7AU/geometry_wallpapers_25220_7380524.jpg");
   background-image:url("https://image.ibb.co/gSwUPp/e5f9f398bbae7953349a88beb427fa9d.png");
+  h1 {
+    margin-top:10px;
+    color:black;
+    font-weight:800;
+  }
+   .alert {
+      margin-bottom:-5px;
+   }
+  #penguin {
+    h1 {
+      margin-top:7%;
+
+    }
+    height:400px;
+  // background-image:url("https://image.ibb.co/gSwUPp/e5f9f398bbae7953349a88beb427fa9d.png");
   .penguin {
+    margin-top: 3%;
     z-index:3;
   }
   }
@@ -18,7 +37,7 @@ html, body {
 }
 
 .navbar{
-  background-color:#304FFE;
+  background-color:$background-color;
   .dropdown {
     .dropdown-menu{
       left:auto;
@@ -30,45 +49,81 @@ html, body {
 
 
 }
+.edit_profile{
 
-#photo-form{
-  i{
-    font-size:30px;
+  background-color:rgba(256, 256, 256, 0.6);
+  margin-bottom:40px;
+  padding-bottom:20px;
+  .photo-display {
+    padding-top:40px;
+    margin-bottom:-40px;
+    background-color:rgba(250, 250, 250, 0.6)
+    img {
+      border: 1px solid black;
+      
 
+    }
+    #photo-form{
+      i{
+        font-size:30px;
+        text-align:left;
+        cursor:pointer;
+      }
+    }
 
+    margin-bottom:40px;
+  }
+  h3 {
+    margin-top:10px;
+    padding:20px;
+    background-color:#18AF85;
+    color: white;
+  }
+
+  #info-form, #password-form{
+    width:500px;
+    border: 0px;
+    background-color:rgb(220, 220, 220);
+    padding:10px;
+    margin:auto;
+
+    .rowInput{
+      display:flex;
+      vertical-align:center;
+      label{
+        display:inline-block;
+        margin-top:5%;
+        font-size:14px;
+        width:15%;
+      }
+      input {
+        width:60%;
+        margin:2%;
+      }
+    }
+    .submit {
+      input {
+        width:25%;
+        margin-right:1%;
+        font-size:14px;
+        font-weight:800;
+      }
+    }
   }
 }
 
-#info-form, #password-form{
-  width:500px;
-  border: 1px solid green;
-  background-color:rgba(0, 130, 12, 0.3);
-  padding:10px;
-  margin-bottom:20px;
-  .rowInput{
-    display:flex;
-
-    label{
-      display:flex;
-      width:15%;
-    }
-    input {
-      width:60%;
-      margin:2%;
-      display:flex;
-    }
-  }
-}
 
 #divform {
-    background-image:url("https://image.ibb.co/b5vjqU/vector_beautiful_blue_snowflake_background.jpg");
+    // background-image:url("https://image.ibb.co/b5vjqU/vector_beautiful_blue_snowflake_background.jpg");
+    background-color:#FAFAFA;
     min-width:400px;
     margin:20px auto;
     max-width:400px;
-    background-color:#7986CB;
+
+    // background-color:#7986CB;
     padding:20px;
     border-radius:10px;
-    box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 1), inset  -5px -8px 4px 1px #263238;
+    // box-shadow: 1px 3px 4px 1px rgba(0, 0, 0, 1), inset  -1px -1px 1px 1px #263238;
     #form-title{
       h1 {
         text-align:center;
@@ -105,22 +160,26 @@ html, body {
     #submit_register {
       display:flex;
       input {
-        box-shadow: 0px 3px 0px 0px #222121;
+        // box-shadow: 0px 3px 0px 0px #222121;
+        border:0px;
         height:40px;
         display:flex;
         color:white;
         font-weight:bold;
-        margin:10px;
+        margin:20px 20px 0px 0px;
+        background-color:$buttons-submit-color;
       }
       
       a{
+        font-size:12px;
         display:flex;
-        color:white;
+        margin-top:20px;
+        color:$a-color;
         float:right;
         padding: 10px;
       }
       a:hover{
-        color:orange;
+        color:$a-hover-color;
       }
     }
   }

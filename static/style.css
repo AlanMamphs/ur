@@ -1,9 +1,18 @@
 body {
   font-family: "Julius Sans One", sans-serif;
-  background-image: url("https://image.ibb.co/btr7AU/geometry_wallpapers_25220_7380524.jpg"); }
+  background-image: url("https://image.ibb.co/gSwUPp/e5f9f398bbae7953349a88beb427fa9d.png"); }
+  body h1 {
+    margin-top: 10px;
+    color: black;
+    font-weight: 800; }
+  body .alert {
+    margin-bottom: -5px; }
   body #penguin {
-    background-image: url("https://image.ibb.co/gSwUPp/e5f9f398bbae7953349a88beb427fa9d.png"); }
+    height: 400px; }
+    body #penguin h1 {
+      margin-top: 7%; }
     body #penguin .penguin {
+      margin-top: 3%;
       z-index: 3; }
 
 html, body {
@@ -16,41 +25,63 @@ html, body {
     left: auto;
     right: 0; }
 
-#photo-form i {
-  font-size: 30px; }
-
-#info-form, #password-form {
-  width: 500px;
-  border: 1px solid green;
-  background-color: rgba(0, 130, 12, 0.3);
-  padding: 10px;
-  margin-bottom: 20px; }
-  #info-form .rowInput, #password-form .rowInput {
-    display: flex; }
-    #info-form .rowInput label, #password-form .rowInput label {
+.edit_profile {
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 40px;
+  padding-bottom: 20px; }
+  .edit_profile .photo-display {
+    padding-top: 40px;
+    margin-bottom: -40px;
+    margin-bottom: 40px; }
+    .edit_profile .photo-display background-color:rgba(250, 250, 250, 0.6)
+    img {
+      border: 1px solid black; }
+    .edit_profile .photo-display #photo-form i {
+      font-size: 30px;
+      text-align: left;
+      cursor: pointer; }
+  .edit_profile h3 {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #18AF85;
+    color: white; }
+  .edit_profile #info-form, .edit_profile #password-form {
+    width: 500px;
+    border: 0px;
+    background-color: gainsboro;
+    padding: 10px;
+    margin: auto; }
+    .edit_profile #info-form .rowInput, .edit_profile #password-form .rowInput {
       display: flex;
-      width: 15%; }
-    #info-form .rowInput input, #password-form .rowInput input {
-      width: 60%;
-      margin: 2%;
-      display: flex; }
+      vertical-align: center; }
+      .edit_profile #info-form .rowInput label, .edit_profile #password-form .rowInput label {
+        display: inline-block;
+        margin-top: 5%;
+        font-size: 14px;
+        width: 15%; }
+      .edit_profile #info-form .rowInput input, .edit_profile #password-form .rowInput input {
+        width: 60%;
+        margin: 2%; }
+    .edit_profile #info-form .submit input, .edit_profile #password-form .submit input {
+      width: 25%;
+      margin-right: 1%;
+      font-size: 14px;
+      font-weight: 800; }
 
 #divform {
-  background-image: url("https://image.ibb.co/b5vjqU/vector_beautiful_blue_snowflake_background.jpg");
+  background-color: #FAFAFA;
   min-width: 400px;
   margin: 20px auto;
   max-width: 400px;
-  background-color: #7986CB;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 7px 10px 34px 1px black, inset -5px -8px 4px 1px #263238; }
+  border-radius: 10px; }
   #divform #form-title h1 {
     text-align: center;
     color: #7499ac;
     font-weight: 600; }
   #divform form .rowInput {
     display: flex;
-    font-family: "Shadows Into Light", cursive; }
+    font-family: "Muli", sans-serif; }
     #divform form .rowInput label {
       width: 70px;
       margin: auto;
@@ -63,15 +94,18 @@ html, body {
   #divform form #submit_register {
     display: flex; }
     #divform form #submit_register input {
-      box-shadow: 0px 3px 0px 0px #222121;
+      border: 0px;
       height: 40px;
       display: flex;
       color: white;
       font-weight: bold;
-      margin: 10px; }
+      margin: 20px 20px 0px 0px;
+      background-color: #EF6C00; }
     #divform form #submit_register a {
+      font-size: 12px;
       display: flex;
-      color: white;
+      margin-top: 20px;
+      color: red;
       float: right;
       padding: 10px; }
     #divform form #submit_register a:hover {
